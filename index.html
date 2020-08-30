@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="frontend/css/bootstrap.min.css">
+    <title>Tasks app</title>
+</head>
+<body>
+    <nav class="navbar navbar-exepand-lg navbar-light bg-light">
+        <a href="#" class="navbar-brand"> Tasks App</a>
+        <ul class="navbar-nav ml-auto">
+            <form class="form-inline my-2 my-lg-0" >
+                <input type="search" id="search" class="form-control  mr-sm-2 " 
+                placeholder="Search" autocomplete="off">
+                <button class="btn btn-success  my-2 my-sm-0" type="submit">
+                    Search
+                </button>
+
+            </form>
+        </ul>
+    </nav>
+
+    <div class="container p-4">
+        <div class="row">
+            <div class="col-md-5">
+                <div class="card my-4">
+                    <div class="card-body">
+                        <form id="tasks-form" >
+                            <input type="hidden" id="taskId">
+                            <div class="form-grups">
+                                <input type="text" id="name" placeholder="Tasks name" 
+                                autocomplete="off" class="form-control">
+                            </div>
+                            <div class="form-grups">
+                                <textarea id="description" cols="30" rows="10" class="form-control"
+                                placeholder="Tasks description"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block text-center">
+                                Save task
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-7">
+
+                <div class="card my-4" id="task-result">
+                    <div class="card-body">
+                        <ul id="container"></ul>
+                    </div>
+                </div>
+
+                <table class="table table-bordered table-sm my-4">
+                    <thead>
+                        <tr>
+                            <td> ID </td>
+                            <td> Name</td>
+                            <td> Description</td>
+                        </tr>
+                    </thead>
+                    <tbody id="tasks-list">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="frontend/js/jquery.min.js"></script>
+    <script src="frontend/js/popper.min.js"></script>
+    <script src="frontend/js/bootstrap.min.js"></script>
+    <script src="frontend/app.js"></script>
+    
+</body>
+</html>
